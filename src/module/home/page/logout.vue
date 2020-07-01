@@ -6,7 +6,7 @@
         <p class="title" v-if="logoutsuccess">退出成功！</p>
         <p class="title" v-if="!logoutsuccess">退出失败，请尝试刷新页面重新操作！</p>
         <!--<p class="info"></p>-->
-        <p class="button"><a href="http://www.xuecheng.com" class="active">返回首页</a><router-link :to="{path: '/login'}">重新登陆</router-link></p>
+        <p class="button"><a href="http://www.xuecheng.com/?logout=true" class="active">返回首页</a><router-link :to="{path: '/login'}">重新登陆</router-link></p>
       </div>
    <p-foot></p-foot>
   </div>
@@ -30,11 +30,15 @@ export default {
 
   },
   created(){
-    loginApi.logout({}).then((res) => {
+    let uid = utilApi.getCookie("uid");
+
+    loginApi.logout(uid).then((res) => {
         if(res.success){
           sessionStorage.removeItem('activeUser');
+          utilApi.delCookie1("uid");
           this.$message('退出成功');
-          this.logoutsuccess = true
+          this.logoutsuccess = true;
+          window.location.href="http://www.xuecheng.com/?logout=true"
         }else{
           this.logoutsuccess = false
         }

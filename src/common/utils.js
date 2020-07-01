@@ -125,12 +125,27 @@ export default {
   setCookie: function (c_name, value, expiredays) {
     var exdate = new Date();
     exdate.setDate(exdate.getDate() + expiredays);
-    document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
+    document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toUTCString());
+  },
+  setCookie1 : function (c_name, value, expiredays) {
+    // alert("setCookie: "+"c_name="+c_name+";  value="+value);
+    // alert("document.domain="+document.domain);
+    let date=new Date();
+    let expireDays1=1; //将date设置为10天以后的时间
+    date.setTime(date.getTime()+expiredays*24*3600*1000); //将userId和userName两个cookie设置为10天后过期
+    // document.cookie = c_name + "=" + escape(value) + "; domain=" + document.domain + "; path=/";
+
+    document.cookie = c_name + "=" + value + "; expires="+date.toUTCString()  + "; domain=" + document.domain + "; path=/";
+    // alert(c_name + "=" + value + "; expires="+date.toUTCString()  + "; domain=" + document.domain + "; path=/");
+    // alert("document.cookie="+document.cookie);
   },
   delCookie: function (name) {
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
-    document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+    document.cookie = name + "=" + cval + ";expires=" + exp.toUTCString();
+  },
+  delCookie1: function (name) {
+    this.setCookie1(name,1,-1);
   },
   getUserSession: function (key) {
     return sessionStorage.getItem(key);
