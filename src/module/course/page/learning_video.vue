@@ -27,9 +27,9 @@
             <div class="course-nav">
               <div class="nav-stacked text-center">
                 <li class="nav"><a :href="url" class="glyphicon glyphicon-list-alt"><span>目录</span></a></li>
-                <li class="lab-note"><a :href="url" class="glyphicon glyphicon-user"><span>笔记</span></a></li>
+<!--                <li class="lab-note"><a :href="url" class="glyphicon glyphicon-user"><span>笔记</span></a></li>
                 <li class="lab-ask"><a :href="url" class="glyphicon glyphicon-cog"><span>问答</span></a></li>
-                <li class="lab-com"><a :href="url" class="glyphicon glyphicon-duplicate"><span>评论</span></a></li>
+                <li class="lab-com"><a :href="url" class="glyphicon glyphicon-duplicate"><span>评论</span></a></li>-->
               </div>
             </div>
             <div class="note">

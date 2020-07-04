@@ -8,7 +8,7 @@ export const login = params => {
   // alert("loginRequest="+loginRequest);
   //请求服务端的认证接口
   return http.requestPostForm('/openapi/auth/userlogin',loginRequest);
-}
+};
 /*退出*/
 export const logout = params => {
   const ssoForm = new FormData();
@@ -17,9 +17,9 @@ export const logout = params => {
   // let para = Object.assign({}, ssoForm);
   // // let ssoRequest = qs.stringify(para);
   let ssoRequest = "uid_cookie="+params+"&xxxx=yyyy";
-  // // alert("ssoRequest="+ssoRequest);
+  // alert("ssoRequest="+ssoRequest);
 
-  return http.requestPost('/openapi/auth/userlogout2',ssoForm);
+  return http.requestPostForm('/openapi/auth/userlogout2',ssoRequest);
 };
 
 

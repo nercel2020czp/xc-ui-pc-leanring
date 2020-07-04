@@ -76,7 +76,7 @@ export default {
           if (valid) {
               this.editLoading = true;
               let para = Object.assign({}, this.loginForm);
-              // alert(JSON.stringify(para));
+            // alert(JSON.stringify(para));
               loginApi.login(para).then((res) => {
                 this.editLoading = false;
                 if(res.success){
@@ -89,7 +89,7 @@ export default {
                   console.log(this.returnUrl);
                   let uid = res.token;
                   //将cookie存进去
-                  utilApi.setCookie1("uid",uid,0.5);
+                  utilApi.setCookie1("uid",uid,0.1);
 
                   if(this.returnUrl!='undefined' && this.returnUrl!=''
                                                    && !this.returnUrl.includes("/userlogout")
