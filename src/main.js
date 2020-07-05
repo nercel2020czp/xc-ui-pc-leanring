@@ -58,8 +58,8 @@ const router = new VueRouter({
 import utilApi from './common/utils';
 import * as systemApi from './base/api/system';
 let sysConfig = require('@/../config/sysConfig')
-let openAuthenticate = sysConfig.openAuthenticate
-let openAuthorize = sysConfig.openAuthorize
+let openAuthenticate = sysConfig.openAuthenticate;
+let openAuthorize = sysConfig.openAuthorize;
 /*
 router.beforeEach((to, from, next) => {
   if(openAuthenticate){
@@ -227,4 +227,4 @@ new Vue({
   // template: '<App/>',
   // components: { App }
   render: c => c(App)
-})
+});

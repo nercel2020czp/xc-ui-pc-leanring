@@ -8,27 +8,27 @@
           <div class="nav-list">
             <ul class="nav navbar-nav">
               <li ><a href="http://www.xuecheng.com/">首页</a></li>
-              <li><a href="http://www.xuecheng.com/course/search">课程</a></li>
+<!--              <li><a href="http://www.xuecheng.com/course/search">课程</a></li>
               <li><a href="#">职业规划</a></li>
-              <li></li>
+              <li></li>-->
             </ul>
           </div>
 
-          <div class="sign-in">
-            <!-- 未登录 -->
-            <!-- <a href="#">登录 </a> <span> | </span> <a href="#"> 注册</a>-->
-            <!-- 登录 -->
-           <!-- <a href="#" class="personal"><span class="personalIco"></span>消息</a>
-            <a href="#" class="personal">购物车</a>-->
+<!--          <div class="sign-in">
+            &lt;!&ndash; 未登录 &ndash;&gt;
+             <a href="#">登录 </a> <span> | </span> <a href="#"> 注册</a>
+             &lt;!&ndash;登录 &ndash;&gt;
+            <a href="#" class="personal"><span class="personalIco"></span>消息</a>
+            <a href="#" class="personal">购物车</a>
             <router-link :to="{path: '/'}">我的学习</router-link>
             <a href="javascript:;" @click="logout" v-if="logined == true">退出</a>
             <a href="javascript:;" @click="showlogin" v-if="logined == false">登陆|注册</a>
 
-          </div>
-          <div class="starch">
+          </div>-->
+<!--          <div class="starch">
             <div><input type="text" class="input-search" v-model="keyword" @keyup.enter="search"  placeholder="输入查询关键词"></div>
             <div class="searchword"><a @click="search">搜索</a> </div>
-          </div>
+          </div>-->
         </div>
       </nav>
     </div>

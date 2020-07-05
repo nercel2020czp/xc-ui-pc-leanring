@@ -37,7 +37,7 @@ export default {
           sessionStorage.removeItem('activeUser');
           utilApi.delCookie1("uid");
           this.$message('退出成功');
-          this.logoutsuccess = true
+          this.logoutsuccess = true;
           document.location.href = "http://www.xuecheng.com/?logout=true";
         }else{
           this.logoutsuccess = false
