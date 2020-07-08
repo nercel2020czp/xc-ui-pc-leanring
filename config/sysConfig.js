@@ -9,4 +9,4 @@ var sysConfig = {
     openAuthorize:true
 }
 
-module.exports = sysConfig
+module.exports = sysConfig;

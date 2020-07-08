@@ -542,7 +542,7 @@ let sysConfig = require('@/../config/sysConfig')
         url: '', // 当前url
         courseId: '', // 课程id
         chapter: '', // 章节Id
-        coursename: '课程名称', // 课程名称
+        coursename: '', // 课程名称
         coursepic: '', // 课程图片
         teachplanList: [], // 课程计划
         playerOptions: {// 播放参数
@@ -997,10 +997,10 @@ let sysConfig = require('@/../config/sysConfig')
             $(this).addClass('cm')
             $('.com').animate({
               'width': '400px'
-            }, 500)
+            }, 500);
             $('.course-nav').animate({
               'right': '401px'
-            }, 500)
+            }, 500);
             $('.video').animate({
               'width': vdwt - 380 + 'px'
             }, 500)
